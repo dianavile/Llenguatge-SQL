@@ -10,11 +10,9 @@
 2) where to find it in the database, 
 3) and how to transform it (before it is returned).
 
-
-in SQL 
-- a TABLE: Dog (ENTITY)
-- ROW: puppie, huskie, labrador (SPECIFIC INSTANCE OF TYPE)
-- COLUMN: Taillenght, Fur Color (COMMON PROPERTIES)
+- TABLE (ENTITY):Dog
+- ROW (SPECIFIC INSTANCE OF TYPE): puppie, huskie, labrador
+- COLUMN (COMMON PROPERTIES): Taillenght, Fur Color
 
 
 ## HOW TO RETRIEVE DATA FROM A SQL DATABASE? 
@@ -36,11 +34,11 @@ SELECT *
 FROM mytable;
 ```
 Examples: 
-Select TITLE: ```SELECT Title FROM movies;```
-Select Director: ```SELECT Director FROM movies;```
-Select Title & Director: ```SELECT Title, Director FROM movies;``
-Select Title & Year: ```SELECT Title, Year FROM movies;```
-Select ALL: ```SELECT * FROM movies;```
+- Select TITLE: ```SELECT Title FROM movies;```
+- Select Director: ```SELECT Director FROM movies;```
+- Select Title & Director: ```SELECT Title, Director FROM movies;``
+- Select Title & Year: ```SELECT Title, Year FROM movies;```
+- Select ALL: ```SELECT * FROM movies;```
 
 ### 2 QUERIES WITH CONSTRAINTS (WHERE)
 = to filter certain results from being returned.

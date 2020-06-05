@@ -153,9 +153,41 @@ WHERE (amount < 5
 OR name = 'paper')
 AND price < 1;
 ```
+##SQL SYNTAX
+####TABLE
+```
+- SELECT
+- FROM
+- WHERE 
+- GROUP BY
+- HAVING
+- ORDER BY
+```
+####KEYWORDS
+```
+- DISTINCT
+- LIMIT
+- ASC
+- DESC
+```
+####FILTERS & VALUES 
+```
+- <
+- >
+- =
+- !=
+- NOT
+- IN
+- BETWEEN
+- AND
+- OR
+- (
+- )
+```
 
 #### RESOURCES
 - [SQLBOLT](https://sqlbolt.com/)
+- [SQL](https://sqlpd.com/)
 - [Exercisis SQL](https://josejuansanchez.org/bd/ejercicios-consultas-sql/index.html#ejercicios.-realizaci%C3%B3n-de-consultas-sql)
 - [W3Schools-SQL](https://www.w3schools.com/sql/default.asp)
 

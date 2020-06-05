@@ -14,7 +14,6 @@
 - ROW (SPECIFIC INSTANCE OF TYPE): puppie, huskie, labrador
 - COLUMN (COMMON PROPERTIES): Taillenght, Fur Color
 
-
 ## HOW TO RETRIEVE DATA FROM A SQL DATABASE? 
 -  write SELECT statements ("queries"):
 
@@ -60,6 +59,27 @@ NOT BETWEEN … AND …	Number is not within range of two values (inclusive)	col
 IN (…)	Number exists in a list	col_name IN (2, 4, 6)
 NOT IN (…)	Number does not exist in a list	col_name NOT IN (1, 3, 5)
 ```
+
+Examples: 
+- Find the movie with a row id of 6: 
+```SELECT id, title FROM movies 
+   WHERE id = 6;```
+- Find the movies released in the years between 2000 and 2010:
+```SELECT title, year FROM movies
+   WHERE year BETWEEN 2000 AND 2010;```
+- Find the movies not released in the years between 2000 and 2010
+```SELECT title, year FROM movies
+WHERE year NOT BETWEEN 2000 AND 2010;```
+- Find the first 5 Pixar movies and their release year
+```
+SELECT title, year FROM movies
+WHERE year <= 2003;
+```
+
+```
+
+```
+
 
 ### 3 QUERIES WITH CONSTRAINTS
 

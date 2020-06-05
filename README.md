@@ -10,6 +10,16 @@
 2) where to find it in the database, 
 3) and how to transform it (before it is returned).
 
+
+A table in SQL = an entity  
+A Row in the table= specific instance of that type 
+A Column =  common properties shared by all entities.
+
+TABLE: DOG
+ROW: puppie, huskie, labrador
+COLUMN: Taillenght, Fur Color.
+
+
 ## HOW TO RETRIEVE DATA FROM A SQL DATABASE? 
 -  write SELECT statements ("queries").
 

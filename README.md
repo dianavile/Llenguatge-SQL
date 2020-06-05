@@ -5,6 +5,10 @@
 - A  "relational database" is  collection of related (2D) tables, simular to Excel spreadsheets, with a fixed number of columns (table attributes or properties)
  and any number of rows of data.
 - SQL provides a safe and scalable storage for websites and mobile applications.
+- A "query" is  a statement which declares:
+1) what data we are looking for, 
+2) where to find it in the database, 
+3) and how to transform it (before it is returned).
 
 ## HOW TO RETRIEVE DATA FROM A SQL DATABASE? 
 -  write SELECT statements ("queries").

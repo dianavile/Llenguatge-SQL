@@ -18,12 +18,28 @@ in SQL
 
 
 ## HOW TO RETRIEVE DATA FROM A SQL DATABASE? 
--  write SELECT statements ("queries").
+-  write SELECT statements ("queries"):
 
+Select query for specific columns
+```
 Select query for a specific columns
-```SELECT column, another_column, …
+SELECT column, another_column, …
 FROM mytable;
 ```
+
+Select query for ALL columns
+```
+Select query for all columns
+SELECT * 
+FROM mytable;
+```
+
+Examples: 
+Select TITLE: ```SELECT Title FROM movies;```
+Select Director: ```SELECT Director FROM movies;```
+Select Title & Director: ```SELECT Title, Director FROM movies;``
+Select Title & Year: ```SELECT Title, Year FROM movies;```
+Select ALL: ```SELECT * FROM movies;```
 
 
 

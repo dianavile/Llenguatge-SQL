@@ -38,8 +38,7 @@ Examples:
 - Select Title & Year: ```SELECT Title, Year FROM movies;```
 - Select ALL: ```SELECT * FROM movies;```
 
-### 2 QUERIES WITH CONSTRAINTS (WHERE)
-= to filter certain results from being returned.
+### 2 QUERIES WITH CONSTRAINTS (WHERE)= to filter certain results from being returned.
 "WHERE" is applied to each row of data by checking specific column values to determine if it should be included in the results or not.
 ```
 Select query with constraints
@@ -49,14 +48,13 @@ WHERE condition
     AND/OR another_condition
     AND/OR …;
  ```
-
 ```
-Operator	                 Condition	                               SQL Example
-=, !=, < <=, >, >=	       Standard numerical operators	            col_name != 4
-BETWEEN … AND …	          Number within two values (inclusive)	    col_name BETWEEN 1.5 AND 10.5
-NOT BETWEEN … AND        	Number NOT within two values (inclusive)	col_name NOT BETWEEN 1 AND 10
-IN (…)	                   Number exists in a list	                 col_name IN (2, 4, 6)
-NOT IN (…)	               Number does not exist in a list	         col_name NOT IN (1, 3, 5)
+Operator	                  Condition	                                  SQL Example
+=, !=, < <=, >, >=	          Standard numerical operators	              col_name != 4
+BETWEEN … AND …	             Number within two values (inclusive)	      col_name BETWEEN 1.5 AND 10.5
+NOT BETWEEN … AND        	   Number NOT within two values (inclusive)  	col_name NOT BETWEEN 1 AND 10
+IN (…)	                      Number exists in a list	                   col_name IN (2, 4, 6)
+NOT IN (…)	                  Number does not exist in a list	           col_name NOT IN (1, 3, 5)
 ```
 
 Examples: 
@@ -81,31 +79,64 @@ SELECT title, year FROM movies
 WHERE year <= 2003;
 ```
 
+
+### 3 QUERIES WITH CONSTRAINTS-2
+```
+Operator	Condition	Example
+=	Case sensitive exact string comparison (notice the single equals)	col_name = "abc"
+!= or <>	Case sensitive exact string inequality comparison	col_name != "abcd"
+LIKE	Case insensitive exact string comparison	col_name LIKE "ABC"
+NOT LIKE	Case insensitive exact string inequality comparison	col_name NOT LIKE "ABCD"
+%	Used anywhere in a string to match a sequence of zero or more characters (only with LIKE or NOT LIKE)	col_name LIKE "%AT%"
+(matches "AT", "ATTIC", "CAT" or even "BATS")
+_	Used anywhere in a string to match a single character (only with LIKE or NOT LIKE)	col_name LIKE "AN_"
+(matches "AND", but not "AN")
+IN (…)	String exists in a list	col_name IN ("A", "B", "C")
+NOT IN (…)	String does not exist in a list	col_name NOT IN ("D", "E", "F")
 ```
 
+Examples: 
+- Find all the Toy Story movies: 
+```
+SELECT title, director FROM movies 
+WHERE title LIKE "Toy Story%";
+```
+- Find all the movies directed by John Lasseter:
+```
+SELECT title, director FROM movies 
+WHERE director LIKE "John Lasseter";
+```
+- Find all the movies (and director) not directed by John Lasseter
+```
+SELECT title, director FROM movies 
+WHERE director != "John Lasseter";
+```
+- Find all the WALL-* movies
+```
+SELECT * FROM movies 
+WHERE title LIKE "WALL-_";
 ```
 
+### 4 QUERIES Filtering and sorting Query results
+### 5 QUERIES Simple SELECT Queries
+### 6 Multi-table queries with JOINs
+### 7 OUTER JOINs
+### 8 A short note on NULLs
 
-### 3 QUERIES WITH CONSTRAINTS
+### 9 Queries with expressions
+### 10 Queries with aggregates 
 
-### 4 QUERIES WITH CONSTRAINTS
+### 11 Order of execution of a Query
 
-### 5 QUERIES WITH CONSTRAINTS
+### 12 Inserting rows
+### 13  Updating rows
+### 14 Deleting rows
 
-### 6 QUERIES WITH CONSTRAINTS
+### 15 Creating tables
+### 16 Altering tables
+### 17 Dropping tables
 
-### 7 QUERIES WITH CONSTRAINTS
-
-### 8 QUERIES WITH CONSTRAINTS
-
-### 9 QUERIES WITH CONSTRAINTS
-
-### 10 QUERIES WITH CONSTRAINTS
-
-### 11 QUERIES WITH CONSTRAINTS
-
-### 12 QUERIES WITH CONSTRAINTS
-
+#### RESOURCES
 - [SQLBOLT](https://sqlbolt.com/)
 - [Exercisis SQL](https://josejuansanchez.org/bd/ejercicios-consultas-sql/index.html#ejercicios.-realizaci%C3%B3n-de-consultas-sql)
 - [W3Schools-SQL](https://www.w3schools.com/sql/default.asp)

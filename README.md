@@ -20,20 +20,21 @@ in SQL
 ## HOW TO RETRIEVE DATA FROM A SQL DATABASE? 
 -  write SELECT statements ("queries"):
 
+### 1 SELECT QUERIES (SELECT)
+= to select for specific columns of data from a table:
+ 
 Select query for specific columns
 ```
 Select query for a specific columns
 SELECT column, another_column, …
 FROM mytable;
 ```
-
 Select query for ALL columns
 ```
 Select query for all columns
 SELECT * 
 FROM mytable;
 ```
-
 Examples: 
 Select TITLE: ```SELECT Title FROM movies;```
 Select Director: ```SELECT Director FROM movies;```
@@ -41,7 +42,46 @@ Select Title & Director: ```SELECT Title, Director FROM movies;``
 Select Title & Year: ```SELECT Title, Year FROM movies;```
 Select ALL: ```SELECT * FROM movies;```
 
+### 2 QUERIES WITH CONSTRAINTS (WHERE)
+= to filter certain results from being returned.
+"WHERE" is applied to each row of data by checking specific column values to determine if it should be included in the results or not.
+```
+Select query with constraints
+SELECT column, another_column, …
+FROM mytable
+WHERE condition
+    AND/OR another_condition
+    AND/OR …;
+ ```
 
+```
+Operator	Condition	SQL Example
+=, !=, < <=, >, >=	Standard numerical operators	col_name != 4
+BETWEEN … AND …	Number is within range of two values (inclusive)	col_name BETWEEN 1.5 AND 10.5
+NOT BETWEEN … AND …	Number is not within range of two values (inclusive)	col_name NOT BETWEEN 1 AND 10
+IN (…)	Number exists in a list	col_name IN (2, 4, 6)
+NOT IN (…)	Number does not exist in a list	col_name NOT IN (1, 3, 5)
+```
+
+### 3 QUERIES WITH CONSTRAINTS
+
+### 4 QUERIES WITH CONSTRAINTS
+
+### 5 QUERIES WITH CONSTRAINTS
+
+### 6 QUERIES WITH CONSTRAINTS
+
+### 7 QUERIES WITH CONSTRAINTS
+
+### 8 QUERIES WITH CONSTRAINTS
+
+### 9 QUERIES WITH CONSTRAINTS
+
+### 10 QUERIES WITH CONSTRAINTS
+
+### 11 QUERIES WITH CONSTRAINTS
+
+### 12 QUERIES WITH CONSTRAINTS
 
 - [SQLBOLT](https://sqlbolt.com/)
 - [Exercisis SQL](https://josejuansanchez.org/bd/ejercicios-consultas-sql/index.html#ejercicios.-realizaci%C3%B3n-de-consultas-sql)

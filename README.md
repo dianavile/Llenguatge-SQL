@@ -4,14 +4,11 @@
 - SQL stands for Structured Query Language. It's a language used to , users query, manipulate, and transform data stored in tables, a "relational database", collection of related (2D) tables, simular to Excel spreadsheets. Each table contains columns for the different fields, and rows for the different records. It provides a safe and scalable storage for websites and mobile applications.
 
 ## WHAT is a QUERY?
-- A "query" is a statement which declares:
-1) what data we are looking for, 
-2) where to find it in the database, 
-3) and how to transform it (before it is returned).
+- A "query" is a statement which declares *what data* we are looking for, *where to find* it in the database, and *how to transform* it (before it is returned):
 
-- TABLE (ENTITY):Dog
-- ROW (SPECIFIC INSTANCE OF TYPE): puppie, huskie, labrador
-- COLUMN (COMMON PROPERTIES): Taillenght, Fur Color
+- TABLE(ENTITY):Dog 
+- ROW (TYPE): puppie, huskie, labrador 
+- COLUMN (PROPERTIES): Taillenght, Fur Color
 
 ## SQL statements structure
 A "SQL statement" is composed of an ordered list of clauses and must always end with a semicolon (;).  
@@ -20,10 +17,8 @@ Each "clause" has its own syntax:
 - FROM
 - WHERE
 
-
 ## HOW TO RETRIEVE DATA FROM A SQL DATABASE? 
-## 1. Write SELECT statement ("queries"): to select data from a table:
-
+## 1. Write SELECT statement ("queries") to select data from a table:
 #### SELECT all data in a table:
 ```
 SELECT *
@@ -40,34 +35,75 @@ The DISTINCT keyword will eliminate duplicated rows.
 SELECT  DISTINCT name;
 FROM students;
 ```
-
-# 2.1 SORT rows 
-The ORDERED keyword will sort the rows.
+## 2 ROWS
+## 2.1 SORT rows 
+The *ORDERED* keyword sort the rows:
 ```
 SELECT name, age;
 FROM friends;
 ORDERED BY name, age DESC;
+```
+## 2.2 LIMIT rows 
+```
+SELECT name, grade;
+FROM course-grades;
+ORDERED BY grade DESC;
+LIMIT 5;
+```
+## 2.3 FILTER rows 
+```
+SELECT product;
+FROM inventory;
+WHERE code= 'ABCDE12345';
+```
+
+## 3 CONDITIONS 
+### 3.1 CONDITIONS:numeric comparison
+Columns and fields containing numeric values, can be used in conditions with *math comparison operators*:
+```
+- = (equals)
+- < (less-than)
+- <= (less-than or equals)
+- > (greater-than)
+- => (greater-than or equals)
+- !=(does not equal)
+```
+```
+SELECT product;
+FROM inventory;
+WHERE amount <= '10';
+```
+### 3.2 CONDITIONS:string comparison 
+Columns and fields containing string values, can be used in conditions with *math comparison operators*:
 
 
-# 2.2 LIMIT rows 
+
+
+```
+SELECT product;
+FROM inventory;
+WHERE code= 'ABCDE12345';
+```
+
+## 3 CONDITIONS 
+### 3.1 CONDITIONS:numeric comparison 
+```
+SELECT product;
+FROM inventory;
+WHERE code= 'ABCDE12345';
+```
+
+## 3 CONDITIONS 
+### 3.1 CONDITIONS:numeric comparison 
+```
+SELECT product;
+FROM inventory;
+WHERE code= 'ABCDE12345';
 ```
 
 
 
-### 1 SELECT QUERIES (SELECT)= select for specific columns of data from a table:
- 
-Select query for specific columns
-```
-Select query for a specific columns
-SELECT column, another_column, …
-FROM mytable;
-```
-Select query for ALL columns
-```
-Select query for all columns
-SELECT * 
-FROM mytable;
-```
+
 Examples: 
 - Select TITLE: ```SELECT Title FROM movies;```
 - Select Director: ```SELECT Director FROM movies;```

@@ -1,8 +1,7 @@
 # Llenguatge-SQL (Structured Query Language)
 
 ## WHAT is SQL?
-- SQL is a "language" to allow users query, manipulate, and transform data from a "relational database", collection of related (2D) tables, simular to Excel spreadsheets, with a fixed number of columns (table attributes or properties) and any number of rows of data.
-- SQL provides a safe and scalable storage for websites and mobile applications.
+- SQL stands for Structured Query Language. It's a language used to , users query, manipulate, and transform data stored in tables, a "relational database", collection of related (2D) tables, simular to Excel spreadsheets. Each table contains columns for the different fields, and rows for the different records. It provides a safe and scalable storage for websites and mobile applications.
 
 ## WHAT is a QUERY?
 - A "query" is a statement which declares:

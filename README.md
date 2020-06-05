@@ -13,6 +13,24 @@
 - ROW (SPECIFIC INSTANCE OF TYPE): puppie, huskie, labrador
 - COLUMN (COMMON PROPERTIES): Taillenght, Fur Color
 
+## Structure of an SQL state
+A SQL statement is composed of an ordered list of clauses such as: 
+- SELECT
+- FROM
+- WHERE
+Each clause has its own syntax.
+- An SQL statement must always end with a semicolon (;).
+
+## SQL statements
+1 #### SELECT statement
+SELECT all data in a table
+```
+SELECT *
+FROM employees;
+```
+1 #### SELECT statement
+
+
 ## HOW TO RETRIEVE DATA FROM A SQL DATABASE? 
 -  write SELECT statements ("queries"):
 
@@ -36,6 +54,7 @@ Examples:
 - Select Title & Director: ```SELECT Title, Director FROM movies;``
 - Select Title & Year: ```SELECT Title, Year FROM movies;```
 - Select ALL: ```SELECT * FROM movies;```
+
 
 ### 2 QUERIES WITH CONSTRAINTS (WHERE)= to filter certain results from being returned.
 "WHERE" is applied to each row of data by checking specific column values to determine if it should be included in the results or not.

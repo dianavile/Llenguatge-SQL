@@ -13,26 +13,46 @@
 - ROW (SPECIFIC INSTANCE OF TYPE): puppie, huskie, labrador
 - COLUMN (COMMON PROPERTIES): Taillenght, Fur Color
 
-## Structure of an SQL state
-A SQL statement is composed of an ordered list of clauses such as: 
+## SQL statements structure
+A "SQL statement" is composed of an ordered list of clauses and must always end with a semicolon (;).  
+Each "clause" has its own syntax:
 - SELECT
 - FROM
 - WHERE
-Each clause has its own syntax.
-- An SQL statement must always end with a semicolon (;).
 
-## SQL statements
-1 #### SELECT statement
-SELECT all data in a table
+
+## HOW TO RETRIEVE DATA FROM A SQL DATABASE? 
+## 1. Write SELECT statement ("queries"): to select data from a table:
+
+#### SELECT all data in a table:
 ```
 SELECT *
 FROM employees;
 ```
-1 #### SELECT statement
+#### SELECT specific columns
+```
+SELECT  name, age;
+FROM students;
+```
+#### SELECT without duplicated ROWS: 
+The DISTINCT keyword will eliminate duplicated rows.
+```
+SELECT  DISTINCT name;
+FROM students;
+```
+
+# 2.1 SORT rows 
+The ORDERED keyword will sort the rows.
+```
+SELECT name, age;
+FROM friends;
+ORDERED BY name, age DESC;
 
 
-## HOW TO RETRIEVE DATA FROM A SQL DATABASE? 
--  write SELECT statements ("queries"):
+# 2.2 LIMIT rows 
+```
+
+
 
 ### 1 SELECT QUERIES (SELECT)= select for specific columns of data from a table:
  

@@ -22,7 +22,9 @@ in SQL
 
 Select query for a specific columns
 ```SELECT column, another_column, …
-FROM mytable;```
+FROM mytable;
+```
+
 
 
 - [SQLBOLT](https://sqlbolt.com/)

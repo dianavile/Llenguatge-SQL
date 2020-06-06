@@ -153,8 +153,8 @@ WHERE (amount < 5
 OR name = 'paper')
 AND price < 1;
 ```
-##SQL SYNTAX
-####TABLE
+## SQL SYNTAX
+#### TABLE
 ```
 - SELECT
 - FROM
@@ -163,14 +163,14 @@ AND price < 1;
 - HAVING
 - ORDER BY
 ```
-####KEYWORDS
+#### KEYWORDS
 ```
 - DISTINCT
 - LIMIT
 - ASC
 - DESC
 ```
-####FILTERS & VALUES 
+#### FILTERS & VALUES 
 ```
 - <
 - >

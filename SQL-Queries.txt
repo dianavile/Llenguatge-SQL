@@ -1,43 +1,94 @@
-# 1 Ejercicios. Realización de consultas SQL
-## 1.1 Tienda de informática
+1 Ejercicios. Realización de consultas SQL
+Tienda de informática
 
-### 1.1.3 Consultas sobre una tabla
+1.1.3 Consultas sobre una tabla
 Lista el nombre de todos los productos que hay en la tabla producto.
+```
+SELECT nombre 
+FROM producte;
+```
+
 Lista los nombres y los precios de todos los productos de la tabla producto.
+```
+SELECT nombres, precio 
+FROM producte;
+```
+
 Lista todas las columnas de la tabla producto.
+```
+SELECT col_name '*'
+FROM producte;
+```
+
 Lista el nombre de los productos, el precio en euros y el precio en dólares estadounidenses (USD).
+
+
+
 Lista el nombre de los productos, el precio en euros y el precio en dólares estadounidenses (USD). Utiliza los siguientes alias para las columnas: nombre de producto, euros, dólares.
+
 Lista los nombres y los precios de todos los productos de la tabla producto, convirtiendo los nombres a mayúscula.
+
 Lista los nombres y los precios de todos los productos de la tabla producto, convirtiendo los nombres a minúscula.
+
 Lista el nombre de todos los fabricantes en una columna, y en otra columna obtenga en mayúsculas los dos primeros caracteres del nombre del fabricante.
+
 Lista los nombres y los precios de todos los productos de la tabla producto, redondeando el valor del precio.
+
 Lista los nombres y los precios de todos los productos de la tabla producto, truncando el valor del precio para mostrarlo sin ninguna cifra decimal.
+
 Lista el código de los fabricantes que tienen productos en la tabla producto.
+
 Lista el código de los fabricantes que tienen productos en la tabla producto, eliminando los códigos que aparecen repetidos.
+
 Lista los nombres de los fabricantes ordenados de forma ascendente.
+
 Lista los nombres de los fabricantes ordenados de forma descendente.
+
 Lista los nombres de los productos ordenados en primer lugar por el nombre de forma ascendente y en segundo lugar por el precio de forma descendente.
+
 Devuelve una lista con las 5 primeras filas de la tabla fabricante.
+
 Devuelve una lista con 2 filas a partir de la cuarta fila de la tabla fabricante. La cuarta fila también se debe incluir en la respuesta.
+
 Lista el nombre y el precio del producto más barato. (Utilice solamente las cláusulas ORDER BY y LIMIT)
+
 Lista el nombre y el precio del producto más caro. (Utilice solamente las cláusulas ORDER BY y LIMIT)
+
 Lista el nombre de todos los productos del fabricante cuyo código de fabricante es igual a 2.
+
 Lista el nombre de los productos que tienen un precio menor o igual a 120€.
+
 Lista el nombre de los productos que tienen un precio mayor o igual a 400€.
+
 Lista el nombre de los productos que no tienen un precio mayor o igual a 400€.
+
 Lista todos los productos que tengan un precio entre 80€ y 300€. Sin utilizar el operador BETWEEN.
+
 Lista todos los productos que tengan un precio entre 60€ y 200€. Utilizando el operador BETWEEN.
+
 Lista todos los productos que tengan un precio mayor que 200€ y que el código de fabricante sea igual a 6.
+
 Lista todos los productos donde el código de fabricante sea 1, 3 o 5. Sin utilizar el operador IN.
+
 Lista todos los productos donde el código de fabricante sea 1, 3 o 5. Utilizando el operador IN.
+
 Lista el nombre y el precio de los productos en céntimos (Habrá que multiplicar por 100 el valor del precio). Cree un alias para la columna que contiene el precio que se llame céntimos.
+
 Lista los nombres de los fabricantes cuyo nombre empiece por la letra S.
+
 Lista los nombres de los fabricantes cuyo nombre termine por la vocal e.
+
 Lista los nombres de los fabricantes cuyo nombre contenga el carácter w.
+
 Lista los nombres de los fabricantes cuyo nombre sea de 4 caracteres.
+
 Devuelve una lista con el nombre de todos los productos que contienen la cadena Portátil en el nombre.
+
 Devuelve una lista con el nombre de todos los productos que contienen la cadena Monitor en el nombre y tienen un precio inferior a 215 €.
 Lista el nombre y el precio de todos los productos que tengan un precio mayor o igual a 180€. Ordene el resultado en primer lugar por el precio (en orden descendente) y en segundo lugar por el nombre (en orden ascendente).
+
+
+
 1.1.4 Consultas multitabla (Composición interna)
 Resuelva todas las consultas utilizando la sintaxis de SQL1 y SQL2.
 
@@ -70,6 +121,8 @@ Resuelva todas las consultas utilizando las cláusulas LEFT JOIN y RIGHT JOIN.
 Devuelve un listado de todos los fabricantes que existen en la base de datos, junto con los productos que tiene cada uno de ellos. El listado deberá mostrar también aquellos fabricantes que no tienen productos asociados.
 Devuelve un listado donde sólo aparezcan aquellos fabricantes que no tienen ningún producto asociado.
 ¿Pueden existir productos que no estén relacionados con un fabricante? Justifique su respuesta.
+
+
 1.1.6 Consultas resumen
 Calcula el número total de productos que hay en la tabla productos.
 Calcula el número total de fabricantes que hay en la tabla fabricante.
@@ -118,6 +171,8 @@ Xiaomi	0
 Seagate	0
 Devuelve un listado con los nombres de los fabricantes donde la suma del precio de todos sus productos es superior a 1000 €.
 Devuelve un listado con el nombre del producto más caro que tiene cada fabricante. El resultado debe tener tres columnas: nombre del producto, precio y nombre del fabricante. El resultado tiene que estar ordenado alfabéticamente de menor a mayor por el nombre del fabricante.
+
+
 1.1.7 Subconsultas (En la cláusula WHERE)
 1.1.7.1 Con operadores básicos de comparación
 Devuelve todos los productos del fabricante Lenovo. (Sin utilizar INNER JOIN).
@@ -141,5 +196,6 @@ Devuelve los nombres de los fabricantes que no tienen productos asociados. (Util
 Lista el nombre de cada fabricante con el nombre y el precio de su producto más caro.
 Devuelve un listado de todos los productos que tienen un precio mayor o igual a la media de todos los productos de su mismo fabricante.
 Lista el nombre del producto más caro del fabricante Lenovo.
+
 1.1.8 Subconsultas (En la cláusula HAVING)
 Devuelve un listado con todos los nombres de los fabricantes que tienen el mismo número de productos que el fabricante Lenovo.

@@ -192,11 +192,9 @@ AND price < 1;
 - [W3Schools-SQL](https://www.w3schools.com/sql/default.asp)
 
 ENCARA NO HE ACABAT AQUET EXERCISI. 
-He fet 1.1.3 Consultas sobre una tabla fins a 36.
-Falta 
+- He fet 1.1.3 Consultas sobre una tabla fins a 36.
+- Faltan: 
 - 1.1.4 Consultas multitabla (Composición interna)
 - 1.1.5 Consultas multitabla (Composición externa)
 - 1.1.6 Consultas resumen
 - 1.1.7 Subconsultas (En la cláusula WHERE)
-
-

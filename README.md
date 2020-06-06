@@ -191,6 +191,12 @@ AND price < 1;
 - [Exercisis SQL](https://josejuansanchez.org/bd/ejercicios-consultas-sql/index.html#ejercicios.-realizaci%C3%B3n-de-consultas-sql)
 - [W3Schools-SQL](https://www.w3schools.com/sql/default.asp)
 
-Encara no he començat aquet exercisi
+ENCARA NO HE ACABAT AQUET EXERCISI. 
+He fet 1.1.3 Consultas sobre una tabla fins a 36.
+Falta 
+- 1.1.4 Consultas multitabla (Composición interna)
+- 1.1.5 Consultas multitabla (Composición externa)
+- 1.1.6 Consultas resumen
+- 1.1.7 Subconsultas (En la cláusula WHERE)
 
 

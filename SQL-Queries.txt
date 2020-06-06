@@ -1,5 +1,13 @@
 1 Ejercicios. Realización de consultas SQL
 Tienda de informática
+SYNTAX
+```
+SELECT column, another_column, …
+FROM mytable
+WHERE condition(s)
+ORDER BY column ASC/DESC
+LIMIT num_limit OFFSET num_offset;
+```
 
 1.1.3 Consultas sobre una tabla
 Lista el nombre de todos los productos que hay en la tabla producto.
@@ -10,7 +18,7 @@ FROM producte;
 
 Lista los nombres y los precios de todos los productos de la tabla producto.
 ```
-SELECT nombres, precio 
+SELECT nombre, precio 
 FROM producte;
 ```
 
@@ -21,74 +29,245 @@ FROM producte;
 ```
 
 Lista el nombre de los productos, el precio en euros y el precio en dólares estadounidenses (USD).
-
-
+```
+SELECT nombre, precio euros, precio dólares
+FROM producte;
+```
 
 Lista el nombre de los productos, el precio en euros y el precio en dólares estadounidenses (USD). Utiliza los siguientes alias para las columnas: nombre de producto, euros, dólares.
 
+```
+SELECT nombre, euros, dólares 
+FROM producte;
+```
+
 Lista los nombres y los precios de todos los productos de la tabla producto, convirtiendo los nombres a mayúscula.
+```
+SELECT nombre, precios
+FROM producte
+col_name LIKE "ABC";
+```
 
 Lista los nombres y los precios de todos los productos de la tabla producto, convirtiendo los nombres a minúscula.
+```
+SELECT nombre, precios
+FROM producte
+col_name LIKE "abc";
+```
 
 Lista el nombre de todos los fabricantes en una columna, y en otra columna obtenga en mayúsculas los dos primeros caracteres del nombre del fabricante.
+```
+SELECT * nombre
+FROM fabricante
+col_name LIKE "AB";
+```
 
 Lista los nombres y los precios de todos los productos de la tabla producto, redondeando el valor del precio.
+```
+SELECT nombre, precio
+FROM productos
+ASC .00;
+```
 
 Lista los nombres y los precios de todos los productos de la tabla producto, truncando el valor del precio para mostrarlo sin ninguna cifra decimal.
+```
+SELECT nombre, precio
+FROM productos
+= .;
+WHERE precio = > 0;
+```
 
 Lista el código de los fabricantes que tienen productos en la tabla producto.
+```
+SELECT codigo(fabricantes)
+FROM productos;
+```
 
 Lista el código de los fabricantes que tienen productos en la tabla producto, eliminando los códigos que aparecen repetidos.
+```
+SELECT DISTINCT código(fabricantes)
+FROM productos;
+```
 
 Lista los nombres de los fabricantes ordenados de forma ascendente.
+```
+SELECT código(fabricantes)
+FROM productos;
+ORDER BY ASC;
+```
 
 Lista los nombres de los fabricantes ordenados de forma descendente.
+```
+SELECT código(fabricantes)
+FROM productos;
+ORDER BY DESC;
+```
 
 Lista los nombres de los productos ordenados en primer lugar por el nombre de forma ascendente y en segundo lugar por el precio de forma descendente.
+```
+SELECT nombre
+FROM productos
+ORDER BY nombre ASC
+ORDER BY precio DESC;
+```
 
 Devuelve una lista con las 5 primeras filas de la tabla fabricante.
+```
+SELECT lista
+FROM fabricante
+LIMIT 5;
+```
 
 Devuelve una lista con 2 filas a partir de la cuarta fila de la tabla fabricante. La cuarta fila también se debe incluir en la respuesta.
+```
+SELECT lista
+FROM fabricante
+LIMIT 2  OFFSET =>4;
+```
 
 Lista el nombre y el precio del producto más barato. (Utilice solamente las cláusulas ORDER BY y LIMIT)
+```
+SELECT nombre, precio
+FROM producto
+ORDER BY precio DESC
+LIMIT 1;
+```
 
 Lista el nombre y el precio del producto más caro. (Utilice solamente las cláusulas ORDER BY y LIMIT)
+```
+SELECT nombre, precio
+FROM producto
+ORDER BY precio ASC
+LIMIT 1;
+```
 
 Lista el nombre de todos los productos del fabricante cuyo código de fabricante es igual a 2.
+```
+SELECT nombre
+FROM producto
+ORDER BY código fabricante =2;
+```
 
 Lista el nombre de los productos que tienen un precio menor o igual a 120€.
+```
+SELECT nombre
+FROM producto
+ORDER BY precio <=120€;
+```
 
 Lista el nombre de los productos que tienen un precio mayor o igual a 400€.
+```
+SELECT nombre
+FROM producto
+ORDER BY precio IN >=400€;
+```
 
 Lista el nombre de los productos que no tienen un precio mayor o igual a 400€.
+```
+SELECT nombre
+FROM producto
+ORDER BY precio NO IN >=400€;
+```
 
 Lista todos los productos que tengan un precio entre 80€ y 300€. Sin utilizar el operador BETWEEN.
+```
+SELECT *
+FROM producto
+ORDER BY precio IN >= 80€ AND <=300€;
+```
 
 Lista todos los productos que tengan un precio entre 60€ y 200€. Utilizando el operador BETWEEN.
+```
+SELECT *
+FROM producto
+ORDER BY precio 
+BETWEEN 60€ AND 200€;
+```
 
 Lista todos los productos que tengan un precio mayor que 200€ y que el código de fabricante sea igual a 6.
+```
+SELECT *
+FROM producte
+WHERE precio > 200€ 
+LIMIT código fabricante >=6;
+```
 
 Lista todos los productos donde el código de fabricante sea 1, 3 o 5. Sin utilizar el operador IN.
+```
+SELECT *
+FROM producte
+WHERE código fabricante [1,3,5];
+```
 
 Lista todos los productos donde el código de fabricante sea 1, 3 o 5. Utilizando el operador IN.
+```
+SELECT *
+FROM producte
+WHERE código fabricante IN [1,3,5];
+```
 
 Lista el nombre y el precio de los productos en céntimos (Habrá que multiplicar por 100 el valor del precio). Cree un alias para la columna que contiene el precio que se llame céntimos.
+```
+SELECT nombre, precio
+FROM producte
+WHERE col_name = céntimos;
+```
 
 Lista los nombres de los fabricantes cuyo nombre empiece por la letra S.
+```
+SELECT nombre
+FROM fabricante
+WHERE nombre = "S";
+```
 
 Lista los nombres de los fabricantes cuyo nombre termine por la vocal e.
+```
+SELECT nombre
+FROM fabricante
+WHERE nombre FINAL = "e";
+```
 
 Lista los nombres de los fabricantes cuyo nombre contenga el carácter w.
+```
+SELECT nombre
+FROM fabricante
+WHERE nombre IN "w";
+```
 
 Lista los nombres de los fabricantes cuyo nombre sea de 4 caracteres.
+```
+SELECT nombre
+FROM fabricante
+WHERE nombre "abcd";
+```
 
 Devuelve una lista con el nombre de todos los productos que contienen la cadena Portátil en el nombre.
+```
+SELECT nombre
+FROM productos
+WHERE nombre = "Portátil";
+```
 
 Devuelve una lista con el nombre de todos los productos que contienen la cadena Monitor en el nombre y tienen un precio inferior a 215 €.
+```
+SELECT nombre
+FROM productos
+WHERE nombre = "Monitor";
+ORDER BY precio <=215€;
+```
+
 Lista el nombre y el precio de todos los productos que tengan un precio mayor o igual a 180€. Ordene el resultado en primer lugar por el precio (en orden descendente) y en segundo lugar por el nombre (en orden ascendente).
+```
+SELECT nombre, precio
+FROM productos
+WHERE precio >= 180€
+ORDER BY precio DESC, nombre ASC; 
+```
 
 
-
+------------------------------------
+HASTA AQUI HE LLEGADO
+------------------------------------
 1.1.4 Consultas multitabla (Composición interna)
 Resuelva todas las consultas utilizando la sintaxis de SQL1 y SQL2.
 
@@ -96,32 +275,21 @@ Devuelve una lista con el nombre del producto, precio y nombre de fabricante de 
 Devuelve una lista con el nombre del producto, precio y nombre de fabricante de todos los productos de la base de datos. Ordene el resultado por el nombre del fabricante, por orden alfabético.
 Devuelve una lista con el código del producto, nombre del producto, código del fabricante y nombre del fabricante, de todos los productos de la base de datos.
 Devuelve el nombre del producto, su precio y el nombre de su fabricante, del producto más barato.
-
 Devuelve el nombre del producto, su precio y el nombre de su fabricante, del producto más caro.
-
 Devuelve una lista de todos los productos del fabricante Lenovo.
-
 Devuelve una lista de todos los productos del fabricante Crucial que tengan un precio mayor que 200€.
-
 Devuelve un listado con todos los productos de los fabricantes Asus, Hewlett-Packardy Seagate. Sin utilizar el operador IN.
-
 Devuelve un listado con todos los productos de los fabricantes Asus, Hewlett-Packardy Seagate. Utilizando el operador IN.
-
 Devuelve un listado con el nombre y el precio de todos los productos de los fabricantes cuyo nombre termine por la vocal e.
-
 Devuelve un listado con el nombre y el precio de todos los productos cuyo nombre de fabricante contenga el carácter w en su nombre.
-
 Devuelve un listado con el nombre de producto, precio y nombre de fabricante, de todos los productos que tengan un precio mayor o igual a 180€. Ordene el resultado en primer lugar por el precio (en orden descendente) y en segundo lugar por el nombre (en orden ascendente)
-
 Devuelve un listado con el código y el nombre de fabricante, solamente de aquellos fabricantes que tienen productos asociados en la base de datos.
 
 1.1.5 Consultas multitabla (Composición externa)
 Resuelva todas las consultas utilizando las cláusulas LEFT JOIN y RIGHT JOIN.
-
 Devuelve un listado de todos los fabricantes que existen en la base de datos, junto con los productos que tiene cada uno de ellos. El listado deberá mostrar también aquellos fabricantes que no tienen productos asociados.
 Devuelve un listado donde sólo aparezcan aquellos fabricantes que no tienen ningún producto asociado.
 ¿Pueden existir productos que no estén relacionados con un fabricante? Justifique su respuesta.
-
 
 1.1.6 Consultas resumen
 Calcula el número total de productos que hay en la tabla productos.
@@ -151,14 +319,12 @@ Lista los nombres de los fabricantes cuyos productos tienen un precio medio mayo
 Devuelve un listado con los nombres de los fabricantes que tienen 2 o más productos.
 Devuelve un listado con los nombres de los fabricantes y el número de productos que tiene cada uno con un precio superior o igual a 220 €. No es necesario mostrar el nombre de los fabricantes que no tienen productos que cumplan la condición.
 Ejemplo del resultado esperado:
-
 nombre	total
 Lenovo	2
 Asus	1
 Crucial	1
 Devuelve un listado con los nombres de los fabricantes y el número de productos que tiene cada uno con un precio superior o igual a 220 €. El listado debe mostrar el nombre de todos los fabricantes, es decir, si hay algún fabricante que no tiene productos con un precio superior o igual a 220€ deberá aparecer en el listado con un valor igual a 0 en el número de productos.
 Ejemplo del resultado esperado:
-
 nombre	total
 Lenovo	2
 Crucial	1
@@ -171,7 +337,6 @@ Xiaomi	0
 Seagate	0
 Devuelve un listado con los nombres de los fabricantes donde la suma del precio de todos sus productos es superior a 1000 €.
 Devuelve un listado con el nombre del producto más caro que tiene cada fabricante. El resultado debe tener tres columnas: nombre del producto, precio y nombre del fabricante. El resultado tiene que estar ordenado alfabéticamente de menor a mayor por el nombre del fabricante.
-
 
 1.1.7 Subconsultas (En la cláusula WHERE)
 1.1.7.1 Con operadores básicos de comparación
